@@ -365,6 +365,14 @@
   align-self: start;
 }
 
+.timeline-location {
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1.25;
+  margin: 0.18rem 0 0;
+}
+
 .timeline-subtitle {
   color: var(--green) !important;
   font-weight: 800;
@@ -385,6 +393,18 @@
 
 .redge-badge {
   padding: 0.55rem;
+}
+
+.light-lab-badge {
+  max-height: 42px;
+  max-width: 156px;
+  padding: 0.34rem 0.42rem;
+}
+
+.epfl-badge {
+  max-height: 32px;
+  max-width: 126px;
+  padding: 0.5rem 0.45rem;
 }
 
 .usi-badge {

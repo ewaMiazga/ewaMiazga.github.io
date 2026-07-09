@@ -1,78 +1,34 @@
-# Ewa Miazga Website
+# Ewa Miazga
 
-This repository contains two related static pages:
+Personal academic website for Ewa Miazga, an EPFL Data Science MSc student and computer vision researcher working on 3D reconstruction, Gaussian Splatting, and appearance modeling.
 
-- `index.html` - the personal homepage.
-- `projects/3dgstream/index.html` - the 3DGStream project page.
+Website:
 
-The root `index.html` stays at the top level so GitHub Pages and similar static hosts can serve it as the homepage.
+https://ewamiazga.github.io/
 
-## Editing Guide
+## Contents
 
-### Personal Website
+- Personal homepage with research interests, publications, education, experience, and selected projects.
+- 3DGStream project page for dynamic 3D Gaussian Splatting reconstruction work.
+- Local assets for profile images, project media, logos, CV, and publication materials.
 
-Edit:
+## Pages
 
-- Homepage content: `index.html`
-- Homepage styling: `static/css/personal-site.css`
-- Homepage navigation behavior: `static/js/personal-site.js`
-- Personal images, CV, logos, and thumbnails: `assets/`
+- Homepage: `index.html`
+- 3DGStream project: `projects/3dgstream/index.html`
 
-Useful homepage sections in `index.html`:
+## Local Preview
 
-- Hero/profile: search for `personal-hero`
-- News: search for `id="news"`
-- Publications: search for `id="publications"`
-- Education: search for `id="education"`
-- Experience: search for `id="experience"`
-- Former projects: search for `id="projects"`
-
-### 3DGStream Project Page
-
-Edit:
-
-- Project page content: `projects/3dgstream/index.html`
-- Project page styling: `static/css/project-page.css`
-- Project images: `projects/3dgstream/results/`
-- Project teaser videos: `projects/3dgstream/teaser-videos/`
-- Project comparison videos: `projects/3dgstream/carousel-videos/`
-- Project banner image: `projects/3dgstream/banner/`
-- Local project report copy: `projects/3dgstream/CV_lab_Report-3.pdf`
-
-The project page uses paths relative to `projects/3dgstream/index.html`, so files inside the same project folder can be referenced directly, for example:
-
-```html
-<img src="results/eval-graphs.png" alt="Quantitative Evaluation Graph">
-<source src="teaser-videos/example.mp4" type="video/mp4">
+```bash
+python3 -m http.server 8000
 ```
 
-Shared files from the repository root need `../../`, for example:
-
-```html
-<link rel="stylesheet" href="../../static/css/project-page.css">
-<img src="../../assets/epfl-logo.png" alt="EPFL Logo">
-```
-
-## Project Structure
+Then open:
 
 ```text
-.
-├── index.html
-├── assets/
-├── docs/
-├── projects/
-│   └── 3dgstream/
-│       ├── index.html
-│       ├── banner/
-│       ├── carousel-videos/
-│       ├── results/
-│       ├── teaser-videos/
-│       └── unused-videos/
-└── static/
-    ├── css/
-    └── js/
+http://localhost:8000
 ```
 
-## Visitor Analytics
+## Notes
 
-See `docs/visitor-analytics.md` for notes on collecting visitor counts.
+This repository is intended to be served as the GitHub Pages user site at `ewamiazga.github.io`. For that URL to work, the GitHub repository should be named `ewaMiazga.github.io`.

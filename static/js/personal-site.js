@@ -16,21 +16,31 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   };
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      const visible = entries
-        .filter((entry) => entry.isIntersecting)
-        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+  const updateActiveSection = () => {
+    const marker = window.scrollY + 110;
+    const active = sections.reduce((current, section) => {
+      return section.offsetTop <= marker ? section : current;
+    }, sections[0]);
 
-      if (visible) {
-        setActiveLink(visible.target.id);
-      }
-    },
-    {
-      rootMargin: '-30% 0px -55% 0px',
-      threshold: [0.1, 0.25, 0.5],
+    if (active) {
+      setActiveLink(active.id);
     }
+  };
+
+  let ticking = false;
+  window.addEventListener(
+    'scroll',
+    () => {
+      if (ticking) return;
+      ticking = true;
+      window.requestAnimationFrame(() => {
+        updateActiveSection();
+        ticking = false;
+      });
+    },
+    { passive: true }
   );
 
-  sections.forEach((section) => observer.observe(section));
+  window.addEventListener('resize', updateActiveSection);
+  updateActiveSection();
 });
