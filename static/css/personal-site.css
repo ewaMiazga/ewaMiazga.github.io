@@ -467,6 +467,12 @@
   justify-content: space-between;
 }
 
+.education-badges {
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+}
+
 .section-badge {
   height: auto;
   max-height: 44px;

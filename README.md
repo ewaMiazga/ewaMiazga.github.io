@@ -1,6 +1,6 @@
 # Ewa Miazga
 
-Personal academic website for Ewa Miazga, an EPFL Data Science MSc student and computer vision researcher working on 3D reconstruction, Gaussian Splatting, and appearance modeling.
+Personal academic website for Ewa Miazga, an EPFL Data Science MSc student on exchange at ETH Zürich and computer vision researcher working on 3D reconstruction, Gaussian Splatting, and appearance modeling.
 
 Website:
 
